@@ -1,0 +1,6 @@
+.venv
+.auth
+.idea
+__pycache__
+auth.json
+allure-report/
