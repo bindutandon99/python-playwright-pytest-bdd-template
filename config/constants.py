@@ -1,0 +1,15 @@
+PRODUCT_SAUCE_LABS_BACKPACK = "Sauce Labs Backpack"
+PRODUCT_SAUCE_LABS_BIKE_LIGHT = "Sauce Labs Bike Light"
+PRICE_SAUCE_LABS_BACKPACK = 29.99
+PRICE_SAUCE_LABS_BIKE_LIGHT = 9.99
+USER_NAME="standard_user"
+USER_VALID_PASSWORD="secret_sauce"
+USER_INVALID_PASSWORD="incorrect_password"
+DASHBOARD_URL_PART="/inventory.html"
+CHECKOUT_URL_PART = "/checkout-step-one.html"
+CHECKOUT_OVERVIEW_URL_PART = "/checkout-step-two.html"
+CHECKOUT_COMPLETE_URL_PART = "/checkout-step-three.html"
+PRODUCTS_PAGE_TITLE="Swag Labs"
+FIRST_NAME='Bin'
+LAST_NAME='Tan'
+POSTAL_CODE='5010'

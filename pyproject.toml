@@ -12,7 +12,7 @@ select = [
     "SIM",
     # isort
     "I",
-    # pycodestyle warnings  
+    # pycodestyle warnings
     "W",
     # McCabe complexity
     "C901",
@@ -21,5 +21,21 @@ select = [
 [tool.mypy]
 strict = true
 allow_untyped_decorators = true
+ignore_missing_imports = true
 # exclude python files in features directory while refactoring
-exclude = "features/"
+exclude="/features"
+
+[[tool.mypy.overrides]]
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s - %(levelname)s - %(message)s"
+bdd_features_base_dir = "features/"
+addopts = "--browser webkit --browser chromium --browser firefox -s -v --maxfail=1 --disable-warnings -q --cucumber-json=cucumber-report/cucumber-report.json"
+#addopts = "-n 3 --browser webkit --browser chromium --browser firefox -s -v --maxfail=1 --disable-warnings -q --cucumber-json=cucumber-report/cucumber-report.json"
+python_files = ["tests/test_*.py"]
+filterwarnings=[
+"ignore:DeprecationWarning",
+"ignore:pytest.PytestUnknownMarkWarning"]
+#markers=["optional"]
+
